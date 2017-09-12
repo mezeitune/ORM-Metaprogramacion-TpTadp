@@ -15,13 +15,16 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
+    tadb (0.3.3)
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   rspec
   rspec-core (~> 3.4)
+  tadb
 
 BUNDLED WITH
-   1.15.3
+   1.15.4
