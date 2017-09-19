@@ -1,7 +1,7 @@
 require 'rspec'
 require_relative '../src/orm'
 
-describe 'Create persistent object' do
+describe 'Simple object persistence' do
 
   let(:pepe){
     class Person
@@ -39,7 +39,7 @@ describe 'Create persistent object' do
     pepe.first_name = "raul"
     pepe.last_name = "porcheto"
     pepe.save!
-    expect(pepe.id).not_to be_nil
+    expect(pepe.is_persisted?).to be_truthy
   end
 
   it 'The name of a Person should return to its persisted value after refreshing' do
@@ -51,16 +51,61 @@ describe 'Create persistent object' do
     expect(pepe.first_name).to eq("jose")
   end
 
-  #it 'Trying to refresh an object that was not previously saved should raise an error' do
-  #  expect(pepe.refresh!).to raise_error('This object does not exist in the database')
-  #end #NO SE ESTÁ CATCHEANDO LA EXCEPCIÓN (!!!)
+  it 'Trying to refresh an object that was not previously saved should raise an error' do
+    expect{pepe.refresh!}.to raise_error('This object does not exist in the database')
+  end
 
   it 'After forgetting a Person, its id should be nil' do
     pepe.first_name = "arturo"
     pepe.last_name = "puig"
     pepe.save!
-    expect(pepe.id).not_to be_nil
+    expect(pepe.is_persisted?).to be_truthy
     pepe.forget!
-    expect(pepe.id).to be_nil #EL OBJETO NO ESTÁ DESAPARECIENDO DEL REGISTRO EN DISCO (!!!)
+    expect(pepe.is_persisted?).to be_falsey #EL OBJETO NO ESTÁ DESAPARECIENDO DEL REGISTRO EN DISCO (!!!)
   end
+end
+
+class Point
+  has_one Numeric, named: :x, default: 0
+  has_one Numeric, named: :y, default: 0
+  def add(other)
+    x = self.x + other.x
+    y = self.y + other.y
+  end
+end
+
+describe 'Recovery and Search' do
+
+  let(:p1){
+    p1 = Point.new()
+    p1.x=2
+    p1.y=5
+    p1
+  }
+  let(:p2){
+    p2 = Point.new()
+    p2.x=1
+    p2.y=3
+    p2
+  }
+  let(:p3){
+    p3 = Point.new()
+    p3.x=9
+    p3.y=7
+    p3
+  }
+
+  after(:all) do
+    Class.class_eval("DB.clear_all")
+  end
+
+  it 'If no object is saved, all_instances should return an empty list' do
+    expect(Point.all_instances).to eq([])
+  end
+
+  #it 'A saved object should appear in all_instances' do
+  #  p1.save!
+  #  expect(Point.all_instances).to include(p1)
+  #end
+
 end
