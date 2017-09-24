@@ -59,9 +59,10 @@ module Persistible
       @persistent_attributes
     end
 
-    #def persistible_attributes()#devuelve solo los atributos que se tienen que persistir por separado
-    #  @persistent_attributes.select{|attr| attr.class.is_persistible?}#class??
-    #end
+    def persistible_attributes()#devuelve solo los atributos que se tienen que persistir por separado
+      @persistent_attributes.select{|name, value| value.class.is_persistible?}.map{|name, value| name}
+      #@attr_information.select{|name, type| type.is_persistible?}.map{|name, value| name} OTRA OPCIÓN
+    end
 
     def id
       @id
@@ -76,22 +77,49 @@ module Persistible
     end
 
     def save!
+      validate!
       if is_persisted?
         @table.delete(id)
       end
-      @id=@table.insert(@persistent_attributes)
+      hash_to_persist = @persistent_attributes.clone
+      hash_to_persist[:id] = @id
+      persistible_attributes.each{|attr| hash_to_persist[attr]=@persistent_attributes[attr].save!}
+      @id=@table.insert(hash_to_persist)
     end
 
     def refresh!
       if !is_persisted?
         raise 'This object does not exist in the database'
       end
-      self.persistent_attributes= @table.entries.find{|entry| entry[:id] == @id}
+      hash_to_refresh = @table.entries.find{|entry| entry[:id] == @id}
+      hash_to_refresh.each do |name, value|
+        if persistible_attributes.include? name
+          @persistent_attributes[name].refresh!
+          #EN REALIDAD NO ESTOY ACTUALIZANDO EN BASE AL ID, SIMPLEMENTE ESTOY ACTUALIZANDO LA REFERENCIA QUE YA TENGO (!!!)
+          #PROBLEMA: QUE PASA SI EN EL MEDIO CAMBIO LA REFERENCIA A OTRO OBJETO ???
+        else
+          @persistent_attributes[name] = value
+        end
+      end
     end
 
     def forget!
       @table.delete(@id)
       @id = nil
+    end
+
+    def validate!
+      @persistent_attributes.each do |name, value| #REPITE LÓGICA CON refresh! (!!!)
+        if persistible_attributes.include? name
+          @persistent_attributes[name].validate!
+        else
+          #@@validators.each do |validator|
+          #  instance_exec(name, value, &validator)
+          #end
+          type = @attr_information[name]
+          raise "The attribute #{name} of object #{self} is not an instance of #{type}" if !value.is_a? type#SE PUEDE MEJORAR EL MENSAJE
+        end
+      end
     end
 
   end
@@ -116,6 +144,10 @@ class Class
     end
     @campos_default[named] = default #seteo valor por default (y me guardo como clave el nombre del atributo)
     @attr_information[named] = type
+  end
+
+  def has_many(type, named:, default:)
+    has_one(Array, named, default) #Array<type> ???
   end
 
   def is_persistible?
