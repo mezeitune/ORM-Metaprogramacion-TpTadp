@@ -105,7 +105,36 @@ describe 'Recovery and Search' do
 
   #it 'A saved object should appear in all_instances' do
   #  p1.save!
-  #  expect(Point.all_instances).to include(p1)
+  #  puts Point.all_instances
+  #  expect(Point.all_instances.include? p1).to be_truthy
+  #end
+
+  #AGREGAR MÁS TESTS DE all_instances (!!!)
+
+  it ':x should be a parameterless method' do
+    expect(Point.is_parameterless_method? :x).to be_truthy
+  end
+
+  it ':add should not be a parameterless method' do
+    expect(Point.is_parameterless_method? :add).to be_falsey
+  end
+
+  it ':find_by_x should be a finder method' do
+    expect(Point.is_finder? :find_by_x).to be_truthy
+  end
+
+  it ':find_by_id should be a finder method' do
+    expect(Point.is_finder? :find_by_id).to be_truthy
+  end
+
+  #it 'If p1 is saved, it should be found using find_by_id' do
+  #  id = p1.save!
+  #  expect(Point.find_by_id(id)[0]).to eq(p1)
+  #end
+
+  #it 'If p1 is saved, it should be found using find_by_x' do
+  #  p1.save!
+  #  expect(Point.find_by_x(p1.x)[0]).to eq(p1)
   #end
 
 end
