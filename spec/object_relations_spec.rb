@@ -18,10 +18,10 @@ class Student
   end
 end
 
-describe 'Object relations' do
+#describe 'Object relations' do
+#
+#  it ':grade is the only attribute that should be persisted separately' do
+#    expect(Student.new.persistible_attributes).to contain_exactly 'grade'
+#  end
 
-  it ':grade is the only attribute that should be persisted separately' do
-    expect(Student.new.persistible_attributes).to contain_exactly 'grade'
-  end
-
-end
+#end
