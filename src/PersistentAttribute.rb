@@ -1,3 +1,5 @@
+require 'json'
+
 class PersistentAttribute
 
   def self.simple(type)
@@ -29,6 +31,10 @@ class PersistentAttribute
     @type
   end
 
+  def validate_type(object)
+    raise "The object #{object} is not an instance of #{@type}" if !object.is_a? @type#SE PUEDE MEJORAR EL MENSAJE
+  end
+
 end
 
 class SimplePersistentAttribute < PersistentAttribute
@@ -41,18 +47,28 @@ class SimplePersistentAttribute < PersistentAttribute
   end
 
   def validate(object)
-    @value_type.validate(object, @type)
+    validate_type(object)
+    @value_type.validate(object)
   end
 end
 
 class MultiplePersistentAttribute < PersistentAttribute
   def save(object)
+    object.each{|obj| @value_type.save(obj)}.to_json
   end
 
   def validate(object)
+    object.each do |obj|#con each también valido que sea una lista
+      validate_type(obj)
+      @value_type.validate(obj)
+      #validators.each do |validator|
+      #  instance_exec(object, &validator)
+      #end
+    end
   end
 
   def refresh(value)
+    JSON::parse(value).each{|obj| @value_type.refresh(obj, @type)}
   end
 end
 
@@ -61,7 +77,7 @@ class PersistibleValue
     object.save!
   end
 
-  def validate(object, type)
+  def validate(object)
     object.validate!
   end
 
@@ -77,11 +93,8 @@ class NotPersistibleValue
     object
   end
 
-  def validate(object, type)
-    #validators.each do |validator|
-    #  instance_exec(object, &validator)
-    #end
-    raise "The object #{object} is not an instance of #{type}" if !object.is_a? type#SE PUEDE MEJORAR EL MENSAJE
+  def validate(object)
+    #No se hace nada. No hay que cascadear las validaciones de tipos primitivos
   end
 
   def refresh(object, type)

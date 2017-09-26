@@ -3,11 +3,14 @@ require_relative '../src/PersistentAttribute'
 
 module Persistible
 
+  def self.table(table_name)
+    TADB::Table.new(table_name)
+  end
+
   module ClassMethods
-    include TADB #include PROVISIONAL, VER DÓNDE GUARDAR LA TABLA (!!!)
 
     def all_instances
-      DB.table(self).entries.map{|hashToConvert|
+      Persistible.table(self).entries.map{|hashToConvert|
         nuevaInstancia=self.new #ROMPE SI INITIALIZE RECIBE PARÁMETROS (!!!)
         hashToConvert.each do |key, value|
           nuevaInstancia.send("#{key}=",value)
@@ -110,23 +113,27 @@ module Persistible
 end
 
 class Class
-  include TADB
   alias_method :new_no_persistence, :new
 
   def has_one(type, named:, default:)
     #@hash_campos_default contiene las claves (nombres de atributos) y los valores default que van a tener TODAS las instancias
+    initialize_persistent_attribute(default, named) #seteo valor por default (y me guardo como clave el nombre del atributo)
+    @attr_information[named] = PersistentAttribute.simple(type)
+  end
+
+  def has_many(type, named:, default:)
+    initialize_persistent_attribute(default, named)
+    @attr_information[named] = PersistentAttribute.multiple(type)
+  end
+
+  def initialize_persistent_attribute(default, named)
     if !is_persistible?
       @campos_default = {}
       @attr_information = {}
       self.include(Persistible)
     end
-    @campos_default[named] = default #seteo valor por default (y me guardo como clave el nombre del atributo)
-    @attr_information[named] = PersistentAttribute.simple(type)
+    @campos_default[named] = default
   end
-
-  #def has_many(type, named:, default:)
-  #  @attr_information[named] = PersistentAttribute.multiple(type)
-  #end
 
   def is_persistible?
     !@campos_default.nil? && !@campos_default.empty?
@@ -137,7 +144,7 @@ class Class
     if is_persistible?
       @campos_default.each{|key,value| nueva_instancia.persistent_attributes[key]=value }
       nueva_instancia.attr_information = @attr_information
-      nueva_instancia.table = DB.table(self) #SE PODRÍA TENER UNA ÚNICA INSTANCIA GLOBAL, EN LA CLASE (!!!)
+      nueva_instancia.table = Persistible.table(self) #SE PODRÍA TENER UNA ÚNICA INSTANCIA GLOBAL, EN LA CLASE (!!!)
       @campos_default.keys.each do |name|
         nueva_instancia.define_singleton_method("#{name}=") {|argument| persistent_attributes["#{name}".to_sym]=argument} #define el setter
         nueva_instancia.define_singleton_method(name) {persistent_attributes["#{name}".to_sym]} #define el getter

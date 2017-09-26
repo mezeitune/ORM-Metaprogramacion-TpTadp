@@ -7,7 +7,7 @@ end
 
 class Student
   has_one String, named: :full_name, default: 'John Doe'
-  has_one Grade, named: :grade, default: Grade.new
+  has_one Grade, named: :grade, default: []
 
   def promoted
     self.grade > 8
@@ -19,9 +19,14 @@ class Student
 end
 
 #describe 'Object relations' do
-#
-#  it ':grade is the only attribute that should be persisted separately' do
-#    expect(Student.new.persistible_attributes).to contain_exactly 'grade'
+
+#  let(:pepe) do
+#    Student.new
+#  end
+
+#  it 'Validating a Student with a String in a Grade attribute should throw an exception' do
+#    pepe.grade = 'Hola'
+#    expect{pepe.validate!}.to raise_error ('The object Hola is not an instance of Grade')
 #  end
 
 #end
