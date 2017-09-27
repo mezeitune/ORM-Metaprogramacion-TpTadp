@@ -27,10 +27,6 @@ class PersistentAttribute
     @validations = validations
   end
 
-  def type #VER SI ES NECESARIO, O SI CONVIENE CHEQUEAR EL TIPO ACÁ ADENTRO (!!!)
-    @type
-  end
-
   def validate_type(object)
     raise "The object #{object} is not an instance of #{@type}" if !object.is_a? @type#SE PUEDE MEJORAR EL MENSAJE
   end

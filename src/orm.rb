@@ -116,8 +116,7 @@ class Class
   alias_method :new_no_persistence, :new
 
   def has_one(type, named:, default:)
-    #@hash_campos_default contiene las claves (nombres de atributos) y los valores default que van a tener TODAS las instancias
-    initialize_persistent_attribute(default, named) #seteo valor por default (y me guardo como clave el nombre del atributo)
+    initialize_persistent_attribute(default, named)
     @attr_information[named] = PersistentAttribute.simple(type)
   end
 
@@ -128,11 +127,11 @@ class Class
 
   def initialize_persistent_attribute(default, named)
     if !is_persistible?
-      @campos_default = {}
+      @campos_default = {}#@campos_default contiene las claves (nombres de atributos) y los valores default que van a tener TODAS las instancias
       @attr_information = {}
       self.include(Persistible)
     end
-    @campos_default[named] = default
+    @campos_default[named] = default#seteo valor por default (y me guardo como clave el nombre del atributo)
   end
 
   def is_persistible?
