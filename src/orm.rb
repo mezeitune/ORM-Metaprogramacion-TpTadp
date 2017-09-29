@@ -1,6 +1,8 @@
 require 'tadb'
 require_relative '../src/PersistentAttribute'
 
+
+
 module Persistible
 
   def self.table(table_name)
@@ -111,8 +113,8 @@ module Persistible
 
 end
 
-class Class
-  alias_method :new_no_persistence, :new
+
+class Module
 
   def has_one(type, named:, default:)
     initialize_persistent_attribute(default, named)
@@ -133,6 +135,15 @@ class Class
     @campos_default[named] = default#seteo valor por default (y me guardo como clave el nombre del atributo)
   end
 
+end
+
+
+
+class Class
+  alias_method :new_no_persistence, :new
+
+
+
   def is_persistible?
     !@campos_default.nil? && !@campos_default.empty?
   end
@@ -140,12 +151,12 @@ class Class
   def new(*args)
     nueva_instancia = self.new_no_persistence(*args)
     if is_persistible?
-      hashNuevo={}
-      hashNuevo2={}
-      self.ancestors.each{|ancestor| hashNuevo=ancestor.instance_variable_get(:@campos_default).merge(hashNuevo)  if(!ancestor.instance_variable_get("@campos_default").nil?)}
-      self.ancestors.each{|ancestor| hashNuevo2=ancestor.instance_variable_get(:@attr_information).merge(hashNuevo2)  if(!ancestor.instance_variable_get("@attr_information").nil?)}
-      @campos_default=hashNuevo.merge(@campos_default)
-      @attr_information=hashNuevo2.merge(@attr_information)
+      campos_default_aux={}
+      attr_information_aux={}
+      self.ancestors.each{|ancestor| campos_default_aux=ancestor.instance_variable_get(:@campos_default).merge(campos_default_aux)  if(!ancestor.instance_variable_get("@campos_default").nil?)}
+      self.ancestors.each{|ancestor| attr_information_aux=ancestor.instance_variable_get(:@attr_information).merge(attr_information_aux)  if(!ancestor.instance_variable_get("@attr_information").nil?)}
+      @campos_default=campos_default_aux.merge(@campos_default)
+      @attr_information=attr_information_aux.merge(@attr_information)
 
       @campos_default.each{|key,value| nueva_instancia.persistent_attributes[key]=value }
       nueva_instancia.attr_information = @attr_information
