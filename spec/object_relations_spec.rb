@@ -7,7 +7,7 @@ end
 
 class Student
   has_one String, named: :full_name, default: 'John Doe'
-  has_one Grade, named: :grade, default: []
+  has_one Grade, named: :grade, default: Grade.new
 
   def promoted
     self.grade > 8
@@ -18,15 +18,28 @@ class Student
   end
 end
 
-#describe 'Object relations' do
+describe 'Object relations' do
 
-#  let(:pepe) do
-#    Student.new
-#  end
+  let(:pepe) do
+    Student.new
+  end
 
-#  it 'Validating a Student with a String in a Grade attribute should throw an exception' do
-#    pepe.grade = 'Hola'
-#    expect{pepe.validate!}.to raise_error ('The object Hola is not an instance of Grade')
-#  end
+  #after(:all) do
+  #  Class.class_eval("DB.clear_all")
+  #end
 
-#end
+  it 'Validating a Student with a String in a Grade attribute should throw an exception' do
+    pepe.grade = 'Hola'
+    expect{pepe.validate!}.to raise_error ('The object Hola is not an instance of Grade')
+  end
+
+  it 'An object with a Simple, NonPersistible attribute can be saved' do
+    nota = Grade.new
+    nota.save!
+  end
+
+  it 'An object with a Simple, Persistible attribute can be saved' do
+    pepe.save!
+  end
+
+end

@@ -50,7 +50,7 @@ end
 
 class MultiplePersistentAttribute < PersistentAttribute
   def save(object)
-    object.each{|obj| @value_type.save(obj)}.to_json
+    object.map{|obj| @value_type.save(obj)}.to_json
   end
 
   def validate(object)
@@ -64,7 +64,7 @@ class MultiplePersistentAttribute < PersistentAttribute
   end
 
   def refresh(value)
-    JSON::parse(value).each{|obj| @value_type.refresh(obj, @type)}
+    JSON::parse(value).map{|obj| @value_type.refresh(obj, @type)}
   end
 end
 

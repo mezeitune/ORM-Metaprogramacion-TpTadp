@@ -53,6 +53,11 @@ module Persistible
       @attr_information = hash_attr_information
     end
 
+    def attr_information
+      @attr_information
+    end
+
+
     def persistent_attributes=(hash_persistent_attributes)#@persistent_attributes contiene los valores propios de la instancia
       @persistent_attributes = hash_persistent_attributes
     end
@@ -75,11 +80,11 @@ module Persistible
     end
 
     def save!
-      validate!
+      #validate!
       if is_persisted?
         @table.delete(id)
       end
-      hash_to_persist = @persistent_attributes.each{|name, value| @attr_information[name].save(value)}
+      hash_to_persist = @persistent_attributes.hmap{|name, value| @attr_information[name].save(value)}
       hash_to_persist[:id] = @id
       @id=@table.insert(hash_to_persist)
     end
@@ -90,7 +95,7 @@ module Persistible
       end
       hash_to_refresh = @table.entries.find{|entry| entry[:id] == @id}
       hash_to_refresh.delete_if{|name, value| name.eql? :id}#elimino el id del hash, porque no se guarda en @persistent_attributes
-      @persistent_attributes = hash_to_refresh.each{|name, value| @attr_information[name].refresh(value)}
+      @persistent_attributes = hash_to_refresh.hmap{|name, value| @attr_information[name].refresh(value)}
       self #devuelvo el objeto actualizado (útil para la composición)
     end
 
@@ -152,4 +157,10 @@ class Class
     nueva_instancia#Para que devuelva la nueva instancia
   end
 
+end
+
+class Hash
+  def hmap(&block)
+    Hash[self.map {|k, v| block.call(k,v) }]
+  end
 end
