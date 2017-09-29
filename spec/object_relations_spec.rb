@@ -1,11 +1,17 @@
 require 'rspec'
 require_relative '../src/orm'
+class PersonaHorrible
+  has_one String,named: :cosaHorrible, default: "una persona inmunda"
+end
+class Person<PersonaHorrible
+  has_one String,named: :apellido,default: "un apellido"
+end
 
 class Grade
   has_one Numeric, named: :value, default: 0
 end
 
-class Student
+class Student < Person
   has_one String, named: :full_name, default: 'John Doe'
   has_one Grade, named: :grade, default: Grade.new
 
@@ -32,14 +38,15 @@ describe 'Object relations' do
     Student.new
   end
 
-  after(:all) do
-    TADB.class_eval("DB.clear_all")
-  end
+  #after(:all) do
+   # TADB.class_eval("DB.clear_all")
+  #end
 
   it 'Validating a Student with a String in a Grade attribute should throw an exception' do
     pepe.grade = 'Hola'
     expect{pepe.validate!}.to raise_error ('The object Hola is not an instance of Grade')
   end
+
 
   it 'Validating a Student with a [] in a Grade attribute should throw an exception' do
     pepe.grade = []
@@ -59,6 +66,7 @@ describe 'Object relations' do
     expect{nico.validate!}.to raise_error ('The object jeje is not an instance of Student')
   end
 
+
   it 'An object with a Simple, NonPersistible attribute can be saved' do
     grade =Grade.new
     grade.save!
@@ -68,6 +76,7 @@ describe 'Object relations' do
   it 'An object with a Simple, Persistible attribute can be saved' do
     pepe.save!
   end
+
 
   it 'An object with a Multiple, NonPersistible attribute can be saved' do
     student_names = StudentNames.new

@@ -140,6 +140,13 @@ class Class
   def new(*args)
     nueva_instancia = self.new_no_persistence(*args)
     if is_persistible?
+      hashNuevo={}
+      hashNuevo2={}
+      self.ancestors.each{|ancestor| hashNuevo=hashNuevo.merge(ancestor.instance_variable_get(:@campos_default))  if(!ancestor.instance_variable_get("@campos_default").nil?)}
+      self.ancestors.each{|ancestor| hashNuevo2=hashNuevo2.merge(ancestor.instance_variable_get(:@attr_information))  if(!ancestor.instance_variable_get("@attr_information").nil?)}
+      @campos_default=hashNuevo.merge(@campos_default)
+      @attr_information=hashNuevo2.merge(@attr_information)
+
       @campos_default.each{|key,value| nueva_instancia.persistent_attributes[key]=value }
       nueva_instancia.attr_information = @attr_information
       nueva_instancia.table = Persistible.table(self) #SE PODRÍA TENER UNA ÚNICA INSTANCIA GLOBAL, EN LA CLASE (!!!)
