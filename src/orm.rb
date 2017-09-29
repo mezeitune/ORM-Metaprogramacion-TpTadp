@@ -53,18 +53,12 @@ module Persistible
       @attr_information = hash_attr_information
     end
 
-    def attr_information #PARA PROBAR, DESPUÉS BORRAR (!!!!!!!)
-      @attr_information
-    end
-
-
     def persistent_attributes=(hash_persistent_attributes)#@persistent_attributes contiene los valores propios de la instancia
       @persistent_attributes = hash_persistent_attributes
     end
 
     def persistent_attributes
-      @persistent_attributes = {} if @persistent_attributes.nil?
-      @persistent_attributes
+      @persistent_attributes ||= {}
     end
 
     def id
@@ -80,7 +74,7 @@ module Persistible
     end
 
     def save!
-      #validate!
+      validate!
       if is_persisted?
         @table.delete(id)
       end
@@ -154,7 +148,7 @@ class Class
         nueva_instancia.define_singleton_method(name) {persistent_attributes["#{name}".to_sym]} #define el getter
       end
     end
-    nueva_instancia#Para que devuelva la nueva instancia
+    nueva_instancia
   end
 
 end

@@ -22,23 +22,47 @@ class StudentNames
   has_many String, named: :names, default: %w[pepe, juan]
 end
 
+class Teacher
+  has_many Student, named: :pupils, default: []
+end
+
 describe 'Object relations' do
 
   let(:pepe) do
     Student.new
   end
 
-  #after(:all) do
-  #  Class.class_eval("DB.clear_all")
-  #end
+  after(:all) do
+    TADB.class_eval("DB.clear_all")
+  end
 
   it 'Validating a Student with a String in a Grade attribute should throw an exception' do
     pepe.grade = 'Hola'
     expect{pepe.validate!}.to raise_error ('The object Hola is not an instance of Grade')
   end
 
+  it 'Validating a Student with a [] in a Grade attribute should throw an exception' do
+    pepe.grade = []
+    expect{pepe.validate!}.to raise_error ('The object [] is not an instance of Grade')
+  end
+
+  it 'Validating a Teacher with a String in a List<Student> attribute should throw an exception' do
+    nico = Teacher.new
+    nico.pupils = 'jeje'
+    expect{nico.validate!}.to raise_error ('The object [] is not an instance of Grade')
+    #Rompe, pero porque el string no entiende 'each'. SIRVE COMO VALIDACIÓN DE TIPOS? (???)
+  end
+
+  it 'Validating a Teacher with a String in a List<Student> attribute should throw an exception' do
+    nico = Teacher.new
+    nico.pupils = [Student.new, 'jeje']
+    expect{nico.validate!}.to raise_error ('The object jeje is not an instance of Student')
+  end
+
   it 'An object with a Simple, NonPersistible attribute can be saved' do
-    Grade.new.save!
+    grade =Grade.new
+    grade.save!
+    expect(grade.is_persisted?).to be_truthy #MEJOR FORMA PARA VERIFICAR QUE ESTÁ BIEN PERSISTIDO (???)
   end
 
   it 'An object with a Simple, Persistible attribute can be saved' do
@@ -48,5 +72,30 @@ describe 'Object relations' do
   it 'An object with a Multiple, NonPersistible attribute can be saved' do
     student_names = StudentNames.new
     student_names.save!
+    expect(student_names.is_persisted?).to be_truthy
   end
+
+  it 'An object with a Multiple, Persistible attribute can be saved' do
+    mati = Student.new
+    mati.full_name = 'Matias Zeitune'
+    nico = Teacher.new
+    nico.pupils << mati
+    nico.pupils << pepe
+    nico.save!
+    expect(nico.is_persisted?).to be_truthy
+  end
+
+  it 'An object with a Multiple, Persistible attribute can be refreshed' do
+    mati = Student.new
+    mati.full_name = 'Matias Zeitune'
+    original_nico = Teacher.new
+    original_nico.pupils << mati
+    original_nico.pupils << pepe
+    original_nico.save!
+    new_nico = original_nico.clone
+    new_nico.refresh!
+    puts new_nico.pupils
+    #expect(new_nico).to be(original_nico) #HAY ALGÚN MATCHER PARA HACER UNA COMPARACIÓN "PROFUNDA" (???)
+  end
+
 end

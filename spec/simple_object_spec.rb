@@ -15,7 +15,7 @@ describe 'Simple object persistence' do
   }
 
   after(:all) do
-    Class.class_eval("DB.clear_all")
+    TADB.class_eval("DB.clear_all")
   end
 
   it 'A Person should understand persistence methods if Person has one persistent attribute' do

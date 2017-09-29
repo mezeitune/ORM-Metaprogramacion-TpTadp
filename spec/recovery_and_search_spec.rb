@@ -32,7 +32,7 @@ describe 'Recovery and Search' do
   }
 
   after(:all) do
-    Class.class_eval("DB.clear_all")
+    TADB.class_eval("DB.clear_all")
   end
 
   it 'If no object is saved, all_instances should return an empty list' do
