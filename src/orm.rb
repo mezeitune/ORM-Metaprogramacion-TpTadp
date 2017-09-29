@@ -142,8 +142,8 @@ class Class
     if is_persistible?
       hashNuevo={}
       hashNuevo2={}
-      self.ancestors.each{|ancestor| hashNuevo=hashNuevo.merge(ancestor.instance_variable_get(:@campos_default))  if(!ancestor.instance_variable_get("@campos_default").nil?)}
-      self.ancestors.each{|ancestor| hashNuevo2=hashNuevo2.merge(ancestor.instance_variable_get(:@attr_information))  if(!ancestor.instance_variable_get("@attr_information").nil?)}
+      self.ancestors.each{|ancestor| hashNuevo=ancestor.instance_variable_get(:@campos_default).merge(hashNuevo)  if(!ancestor.instance_variable_get("@campos_default").nil?)}
+      self.ancestors.each{|ancestor| hashNuevo2=ancestor.instance_variable_get(:@attr_information).merge(hashNuevo2)  if(!ancestor.instance_variable_get("@attr_information").nil?)}
       @campos_default=hashNuevo.merge(@campos_default)
       @attr_information=hashNuevo2.merge(@attr_information)
 
