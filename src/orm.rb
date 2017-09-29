@@ -53,7 +53,7 @@ module Persistible
       @attr_information = hash_attr_information
     end
 
-    def attr_information
+    def attr_information #PARA PROBAR, DESPUÉS BORRAR (!!!!!!!)
       @attr_information
     end
 
@@ -84,7 +84,7 @@ module Persistible
       if is_persisted?
         @table.delete(id)
       end
-      hash_to_persist = @persistent_attributes.hmap{|name, value| @attr_information[name].save(value)}
+      hash_to_persist = @persistent_attributes.map_values{|name, value| @attr_information[name].save(value)}
       hash_to_persist[:id] = @id
       @id=@table.insert(hash_to_persist)
     end
@@ -95,7 +95,7 @@ module Persistible
       end
       hash_to_refresh = @table.entries.find{|entry| entry[:id] == @id}
       hash_to_refresh.delete_if{|name, value| name.eql? :id}#elimino el id del hash, porque no se guarda en @persistent_attributes
-      @persistent_attributes = hash_to_refresh.hmap{|name, value| @attr_information[name].refresh(value)}
+      @persistent_attributes = hash_to_refresh.map_values{|name, value| @attr_information[name].refresh(value)}
       self #devuelvo el objeto actualizado (útil para la composición)
     end
 
@@ -160,7 +160,7 @@ class Class
 end
 
 class Hash
-  def hmap(&block)
-    Hash[self.map {|k, v| block.call(k,v) }]
+  def map_values(&block)
+    Hash[self.map {|k, v| [k, block.call(k,v)] }]
   end
 end

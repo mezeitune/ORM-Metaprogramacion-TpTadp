@@ -18,6 +18,10 @@ class Student
   end
 end
 
+class StudentNames
+  has_many String, named: :names, default: %w[pepe, juan]
+end
+
 describe 'Object relations' do
 
   let(:pepe) do
@@ -34,12 +38,15 @@ describe 'Object relations' do
   end
 
   it 'An object with a Simple, NonPersistible attribute can be saved' do
-    nota = Grade.new
-    nota.save!
+    Grade.new.save!
   end
 
   it 'An object with a Simple, Persistible attribute can be saved' do
     pepe.save!
   end
 
+  it 'An object with a Multiple, NonPersistible attribute can be saved' do
+    student_names = StudentNames.new
+    student_names.save!
+  end
 end
