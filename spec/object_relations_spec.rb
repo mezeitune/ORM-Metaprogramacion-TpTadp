@@ -14,7 +14,7 @@ class Person<PersonaHorrible
 end
 
 class Grade
-  has_one Numeric, named: :value, default: 7, from: 4, to:9,no_blank: true
+  has_one Numeric, named: :value, default: 7, from: 4, to:9,no_blank: true #, validate: proc{ value > 2 }
 end
 
 class Student < Person

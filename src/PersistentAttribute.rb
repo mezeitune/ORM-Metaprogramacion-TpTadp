@@ -1,8 +1,8 @@
 require 'json'
 ###############VALIDATIONS
 class To
-  def self.execute(param1,param2)
-    if !(param1<param2)
+  def self.execute(value,expected)
+    if !(value<expected)
       raise "No coincide con lo esperado por to"
 
     end
@@ -12,9 +12,9 @@ end
 
 
 class From
-  def self.execute(param1,param2)
+  def self.execute(value,expected)
 
-    if !(param1>param2)
+    if !(value>expected)
       raise "No coincide con lo esperado por from"
 
     end
@@ -23,15 +23,23 @@ end
 
 
 class No_blank
-  def self.execute(param1,param2)
-    if (param2)
-      if(param1.nil?)
+  def self.execute(value,expected)
+    if (expected)
+      if(value.nil?)
         raise "No coincide con lo esperado por no blank"
       end
     end
   end
 end
 
+class Validate
+  def self.execute(value,bloque)
+    if(!bloque.call(value))
+      raise "No coincide con lo esperado por no validate"
+    end
+  end
+end
+###########################################################
 
 class PersistentAttribute
 
