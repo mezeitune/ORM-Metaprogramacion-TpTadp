@@ -1,8 +1,6 @@
 require 'tadb'
 require_relative '../src/PersistentAttribute'
 
-
-
 module Persistible
 
   def self.table(table_name)
@@ -12,13 +10,14 @@ module Persistible
   module ClassMethods
 
     def all_instances
-      Persistible.table(self).entries.map{|hashToConvert|
-        nuevaInstancia=self.new #ROMPE SI INITIALIZE RECIBE PARÁMETROS (!!!)
-        hashToConvert.each do |key, value|
-          nuevaInstancia.send("#{key}=",value)
-        end
-        nuevaInstancia
-      }
+      classes_to_instance = descendants.clone << self
+      classes_to_instance.map do |klass|
+        Persistible.table(klass).entries.map{|hashToConvert|
+          new_instance = klass.new #ROMPE SI INITIALIZE RECIBE PARÁMETROS (!!!)
+          new_instance.id = hashToConvert[:id]
+          new_instance.refresh!
+        }.flatten
+      end
     end
 
     def method_missing(sym, *args, &block)
@@ -101,7 +100,7 @@ module Persistible
     end
 
     def validate!
-      @persistent_attributes.each{|name, value| @attr_information[name].validate(value)}#REPITO LA ITERACIÓN DEL HASH (!!!)
+      @persistent_attributes.each{|name, value| @attr_information[name].validate(value)}
     end
 
   end
@@ -112,7 +111,6 @@ module Persistible
   end
 
 end
-
 
 class Module
 
@@ -135,14 +133,18 @@ class Module
     @campos_default[named] = default#seteo valor por default (y me guardo como clave el nombre del atributo)
   end
 
+  def descendants
+    @descendants ||= []
+  end
+
+  def included(klass)
+    descendants << klass if klass.is_a? Class
+  end
+
 end
-
-
 
 class Class
   alias_method :new_no_persistence, :new
-
-
 
   def is_persistible?
     !@campos_default.nil? && !@campos_default.empty?
@@ -160,7 +162,7 @@ class Class
 
       @campos_default.each{|key,value| nueva_instancia.persistent_attributes[key]=value }
       nueva_instancia.attr_information = @attr_information
-      nueva_instancia.table = Persistible.table(self) #SE PODRÍA TENER UNA ÚNICA INSTANCIA GLOBAL, EN LA CLASE (!!!)
+      nueva_instancia.table = Persistible.table(self)
       @campos_default.keys.each do |name|
         nueva_instancia.define_singleton_method("#{name}=") {|argument| persistent_attributes["#{name}".to_sym]=argument} #define el setter
         nueva_instancia.define_singleton_method(name) {persistent_attributes["#{name}".to_sym]} #define el getter
@@ -169,6 +171,9 @@ class Class
     nueva_instancia
   end
 
+  def inherited(klass)
+    descendants << klass
+  end
 end
 
 class Hash

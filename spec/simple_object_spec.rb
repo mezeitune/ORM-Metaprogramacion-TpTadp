@@ -9,7 +9,6 @@ describe 'Simple object persistence' do
       has_one String, named: :last_name, default: ""
       has_one Numeric, named: :age, default: 0
       #has_one Boolean, named: :admin, default: nil FALTA VER TEMA DE Boolean (!!!)
-      #attr_accessor :some_other_non_persistible_attribute
     end
     Person.new
   }
@@ -61,6 +60,6 @@ describe 'Simple object persistence' do
     pepe.save!
     expect(pepe.is_persisted?).to be_truthy
     pepe.forget!
-    expect(pepe.is_persisted?).to be_falsey #EL OBJETO NO ESTÁ DESAPARECIENDO DEL REGISTRO EN DISCO (!!!)
+    expect(pepe.is_persisted?).to be_falsey
   end
 end

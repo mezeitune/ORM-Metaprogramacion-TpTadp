@@ -1,9 +1,7 @@
 require 'rspec'
 require_relative '../src/orm'
-class PersonaHorrible
-  has_one String,named: :cosaHorrible, default: "una persona inmunda"
-end
-class Person<PersonaHorrible
+
+class Person
   has_one String,named: :apellido,default: "un apellido"
 end
 
@@ -38,9 +36,9 @@ describe 'Object relations' do
     Student.new
   end
 
-  #after(:all) do
-   # TADB.class_eval("DB.clear_all")
-  #end
+  after(:all) do
+    TADB.class_eval("DB.clear_all")
+  end
 
   it 'Validating a Student with a String in a Grade attribute should throw an exception' do
     pepe.grade = 'Hola'
@@ -103,7 +101,6 @@ describe 'Object relations' do
     original_nico.save!
     new_nico = original_nico.clone
     new_nico.refresh!
-    puts new_nico.pupils
     #expect(new_nico).to be(original_nico) #HAY ALGÚN MATCHER PARA HACER UNA COMPARACIÓN "PROFUNDA" (???)
   end
 

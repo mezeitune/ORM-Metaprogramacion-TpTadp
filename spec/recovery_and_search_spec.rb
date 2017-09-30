@@ -36,7 +36,7 @@ describe 'Recovery and Search' do
   end
 
   it 'If no object is saved, all_instances should return an empty list' do
-    expect(Point.all_instances).to eq([])
+    expect(Point.all_instances).to eq([[]])
   end
 
   #it 'A saved object should appear in all_instances' do
