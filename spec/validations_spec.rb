@@ -55,11 +55,20 @@ describe 'Validations' do
     Student.has_one String, named: :domicilio, default: ''#EL ATRIBUTO SE MANTIENE ENTRE TESTS (!!!)
   end
 
-  it 'Validating a Student with a Grade lower than 2 should throw an exception' do
+  it 'from validation works with multiple, numeric attributes' do
+    Student.has_many Numeric, named: :numeric_grades, default: [20,0,30], from: 18, to: 100
     pepe.full_name = 'Jose Perez'
     pepe.age = 20
-    pepe.grades = [Grade.new]
+    expect{pepe.validate!}.to raise_error ('No coincide con lo esperado por from')
+    Student.has_many Numeric, named: :numeric_grades, default: []#EL ATRIBUTO SE MANTIENE ENTRE TESTS (!!!)
+  end
+
+  it 'to validation works with multiple, numeric attributes' do
+    Student.has_many Numeric, named: :numeric_grades, default: [20,101,30], from: 18, to: 100
+    pepe.full_name = 'Jose Perez'
+    pepe.age = 20
     expect{pepe.validate!}.to raise_error ('No coincide con lo esperado por to')
+    Student.has_many Numeric, named: :numeric_grades, default: []#EL ATRIBUTO SE MANTIENE ENTRE TESTS (!!!)
   end
 
 end

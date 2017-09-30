@@ -117,13 +117,13 @@ class Module
   def has_one(type, named:,default: nil,**hash_validations)
     hash_validations ||= {}#SE PUEDE PONER COMO VALOR DEFAULT?
     initialize_persistent_attribute(default, named)
-    @attr_information[named] = PersistentAttribute.simple(type, hash_validations)
+    @attr_information[named] = PersistentAttribute.simple(type, default, hash_validations)
   end
 
   def has_many(type, named:, default: nil,**hash_validations)
     hash_validations ||= {}#SE PUEDE PONER COMO VALOR DEFAULT?
     initialize_persistent_attribute(default, named)
-    @attr_information[named] = PersistentAttribute.multiple(type, hash_validations)
+    @attr_information[named] = PersistentAttribute.multiple(type, default, hash_validations)
   end
 
   def initialize_persistent_attribute(default, named)

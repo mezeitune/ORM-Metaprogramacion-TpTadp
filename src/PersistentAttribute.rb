@@ -3,15 +3,16 @@ require_relative '../src/validations'
 
 class PersistentAttribute
 
-  def self.simple(type, validations)
-    SimplePersistentAttribute.new(type, validations)
+  def self.simple(type, default, validations)
+    SimplePersistentAttribute.new(type,default, validations)
   end
 
-  def self.multiple(type, validations)
-    MultiplePersistentAttribute.new(type, validations)
+  def self.multiple(type, default, validations)
+    MultiplePersistentAttribute.new(type,default, validations)
   end
 
-  def initialize(type, validations)
+  def initialize(type, default, validations)
+    @default = default
     @validations=validations
     @type = type
     if type.is_persistible?
@@ -33,7 +34,7 @@ end
 
 class SimplePersistentAttribute < PersistentAttribute
   def save(object)
-    @value_type.save(object)
+    @value_type.save(object, @default)
   end
 
   def refresh(value)#value puede ser un objeto o un id
@@ -48,7 +49,7 @@ end
 
 class MultiplePersistentAttribute < PersistentAttribute
   def save(object)
-    object.map{|obj| @value_type.save(obj)}.to_json
+    object.map{|obj| @value_type.save(obj, @default)}.to_json
   end
 
   def validate(object)
@@ -64,14 +65,12 @@ class MultiplePersistentAttribute < PersistentAttribute
 end
 
 class PersistibleValue
-  def save(object)
-    object.save!
+  def save(object, default)
+    object.save! || (default.save! if !default.nil?)
   end
 
   def validate(object, validations)
     object.validate!
-    #LAS VALIDACIONES SE TIENEN QUE HACER TAMBIÉN SOBRE EL OBJETO COMPUESTO, ADEMÁS DE CASCADEARLAS?
-    #validations.each{|name, value| Object.const_get(name.to_s.capitalize).execute(object,value)}
   end
 
   def refresh(id, type)
@@ -82,8 +81,8 @@ class PersistibleValue
 end
 
 class NotPersistibleValue
-  def save(object)
-    object
+  def save(object, default)
+    object || default
   end
 
   def validate(object,validations)
@@ -98,5 +97,3 @@ class NotPersistibleValue
     object
   end
 end
-
-

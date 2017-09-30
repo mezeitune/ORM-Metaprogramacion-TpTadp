@@ -8,7 +8,7 @@ describe 'Simple object persistence' do
       has_one String, named: :first_name, default: ""
       has_one String, named: :last_name, default: ""
       has_one Numeric, named: :age, default: 0
-      #has_one Boolean, named: :admin, default: nil FALTA VER TEMA DE Boolean (!!!)
+      #has_one Boolean, named: :admin, default: nil CÓMO PODEMOS RESOLVER LA VALIDACIÓN DE TIPOS (???)
     end
     Person.new
   }
