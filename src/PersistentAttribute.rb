@@ -1,57 +1,18 @@
 require 'json'
-###############VALIDATIONS
-class To
-  def self.execute(value,expected)
-    if !(value<expected)
-      raise "No coincide con lo esperado por to"
-
-    end
-  end
-end
-
-
-
-class From
-  def self.execute(value,expected)
-
-    if !(value>expected)
-      raise "No coincide con lo esperado por from"
-
-    end
-  end
-end
-
-
-class No_blank
-  def self.execute(value,expected)
-    if (expected)
-      if(value.nil?)
-        raise "No coincide con lo esperado por no blank"
-      end
-    end
-  end
-end
-
-class Validate
-  def self.execute(value,bloque)
-    if(!bloque.call(value))
-      raise "No coincide con lo esperado por no validate"
-    end
-  end
-end
-###########################################################
+require_relative '../src/validations'
 
 class PersistentAttribute
 
-  def self.simple(type)
-    SimplePersistentAttribute.new(type)
+  def self.simple(type, validations)
+    SimplePersistentAttribute.new(type, validations)
   end
 
-  def self.multiple(type)
-    MultiplePersistentAttribute.new(type)
+  def self.multiple(type, validations)
+    MultiplePersistentAttribute.new(type, validations)
   end
 
-  def initialize(type)
+  def initialize(type, validations)
+    @validations=validations
     @type = type
     if type.is_persistible?
       @value_type = PersistibleValue.new
@@ -62,10 +23,6 @@ class PersistentAttribute
 
   def validations
     @validations ||= {}
-  end
-
-  def validationsAdd(validation)#recibe un hash con todas las validations
-    @validations=validation
   end
 
   def validate_type(object)
@@ -85,8 +42,7 @@ class SimplePersistentAttribute < PersistentAttribute
 
   def validate(object)
     validate_type(object)
-    v=validations
-    @value_type.validate(object,v)
+    @value_type.validate(object, validations)
   end
 end
 
@@ -98,11 +54,7 @@ class MultiplePersistentAttribute < PersistentAttribute
   def validate(object)
     object.each do |obj|#con each también valido que sea una lista
       validate_type(obj)
-      v=validations
-      @value_type.validate(obj,v)
-      #validators.each do |validator|
-      #  instance_exec(object, &validator)
-      #end
+      @value_type.validate(obj,validations)
     end
   end
 
@@ -118,7 +70,8 @@ class PersistibleValue
 
   def validate(object, validations)
     object.validate!
-    validations.each{|name, value| Object.const_get(name.to_s.capitalize).execute(object,value)}
+    #LAS VALIDACIONES SE TIENEN QUE HACER TAMBIÉN SOBRE EL OBJETO COMPUESTO, ADEMÁS DE CASCADEARLAS?
+    #validations.each{|name, value| Object.const_get(name.to_s.capitalize).execute(object,value)}
   end
 
   def refresh(id, type)
@@ -134,9 +87,11 @@ class NotPersistibleValue
   end
 
   def validate(object,validations)
-    #No se hace nada. No hay que cascadear las validaciones de tipos primitivos
-    validations.each{|name, value| Object.const_get(name.to_s.capitalize).execute(object,value)}
-
+    validations.each do |name, value|
+      validation_class_name = name.to_s.capitalize
+      raise "No existe el tipo de validacion #{validation_class_name}"if !Object.const_defined? validation_class_name
+      Object.const_get(validation_class_name).execute(object,value)
+    end
   end
 
   def refresh(object, type)

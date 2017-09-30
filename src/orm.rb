@@ -10,7 +10,6 @@ module Persistible
   module ClassMethods
 
     def all_instances
-
       classes_to_instance = descendants.clone << self
       classes_to_instance.map do |klass|
         Persistible.table(klass).entries.map{|hashToConvert|
@@ -19,16 +18,6 @@ module Persistible
           new_instance.refresh!
         }.flatten
       end
-
-
-      Persistible.table(self).entries.map{|hashToConvert|
-        nuevaInstancia=self.new #ROMPE SI INITIALIZE RECIBE PARÁMETROS (!!!)
-        hashToConvert.each do |key, value|
-          nuevaInstancia.send("#{key}=",value)
-        end
-        nuevaInstancia
-      }
-
     end
 
     def method_missing(sym, *args, &block)
@@ -125,18 +114,16 @@ end
 
 class Module
 
-  def has_one(type, named:,default:,**hash_validations)
-    hash_validations={} if hash_validations.nil?
-
+  def has_one(type, named:,default: nil,**hash_validations)
+    hash_validations ||= {}#SE PUEDE PONER COMO VALOR DEFAULT?
     initialize_persistent_attribute(default, named)
-    @attr_information[named] = PersistentAttribute.simple(type)
-    @attr_information[named].validationsAdd(hash_validations)
-
+    @attr_information[named] = PersistentAttribute.simple(type, hash_validations)
   end
 
-  def has_many(type, named:, default:)
+  def has_many(type, named:, default: nil,**hash_validations)
+    hash_validations ||= {}#SE PUEDE PONER COMO VALOR DEFAULT?
     initialize_persistent_attribute(default, named)
-    @attr_information[named] = PersistentAttribute.multiple(type)
+    @attr_information[named] = PersistentAttribute.multiple(type, hash_validations)
   end
 
   def initialize_persistent_attribute(default, named)
@@ -146,7 +133,6 @@ class Module
       self.include(Persistible)
     end
     @campos_default[named] = default#seteo valor por default (y me guardo como clave el nombre del atributo)
-
   end
 
   def descendants
@@ -161,9 +147,6 @@ end
 
 class Class
   alias_method :new_no_persistence, :new
-
-
-
 
   def is_persistible?
     !@campos_default.nil? && !@campos_default.empty?
