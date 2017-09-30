@@ -1,4 +1,37 @@
 require 'json'
+###############VALIDATIONS
+class To
+  def self.execute(param1,param2)
+    if !(param1<param2)
+      raise "No coincide con lo esperado por to"
+
+    end
+  end
+end
+
+
+
+class From
+  def self.execute(param1,param2)
+
+    if !(param1>param2)
+      raise "No coincide con lo esperado por from"
+
+    end
+  end
+end
+
+
+class No_blank
+  def self.execute(param1,param2)
+    if (param2)
+      if(param1.nil?)
+        raise "No coincide con lo esperado por no blank"
+      end
+    end
+  end
+end
+
 
 class PersistentAttribute
 
@@ -20,11 +53,11 @@ class PersistentAttribute
   end
 
   def validations
-    @validations ||= []
+    @validations ||= {}
   end
 
-  def validations=(validations)
-    @validations = validations
+  def validationsAdd(validation)#recibe un hash con todas las validations
+    @validations=validation
   end
 
   def validate_type(object)
@@ -44,7 +77,8 @@ class SimplePersistentAttribute < PersistentAttribute
 
   def validate(object)
     validate_type(object)
-    @value_type.validate(object)
+    v=validations
+    @value_type.validate(object,v)
   end
 end
 
@@ -56,7 +90,8 @@ class MultiplePersistentAttribute < PersistentAttribute
   def validate(object)
     object.each do |obj|#con each también valido que sea una lista
       validate_type(obj)
-      @value_type.validate(obj)
+      v=validations
+      @value_type.validate(obj,v)
       #validators.each do |validator|
       #  instance_exec(object, &validator)
       #end
@@ -73,8 +108,9 @@ class PersistibleValue
     object.save!
   end
 
-  def validate(object)
+  def validate(object, validations)
     object.validate!
+    validations.each{|name, value| Object.const_get(name.to_s.capitalize).execute(object,value)}
   end
 
   def refresh(id, type)
@@ -89,11 +125,15 @@ class NotPersistibleValue
     object
   end
 
-  def validate(object)
+  def validate(object,validations)
     #No se hace nada. No hay que cascadear las validaciones de tipos primitivos
+    validations.each{|name, value| Object.const_get(name.to_s.capitalize).execute(object,value)}
+
   end
 
   def refresh(object, type)
     object
   end
 end
+
+

@@ -3,10 +3,18 @@ require_relative '../src/orm'
 
 class Person
   has_one String,named: :apellido,default: "un apellido"
+
+class PersonaHorrible
+
+  has_one String,named: :cosaHorrible, default: "una persona inmunda"
+end
+class Person<PersonaHorrible
+  has_one String,named: :cosaHorrible,default: "un apellido"
+
 end
 
 class Grade
-  has_one Numeric, named: :value, default: 0
+  has_one Numeric, named: :value, default: 7, from: 4, to:9,no_blank: true
 end
 
 class Student < Person
@@ -51,12 +59,7 @@ describe 'Object relations' do
     expect{pepe.validate!}.to raise_error ('The object [] is not an instance of Grade')
   end
 
-  it 'Validating a Teacher with a String in a List<Student> attribute should throw an exception' do
-    nico = Teacher.new
-    nico.pupils = 'jeje'
-    expect{nico.validate!}.to raise_error ('The object [] is not an instance of Grade')
-    #Rompe, pero porque el string no entiende 'each'. SIRVE COMO VALIDACIÓN DE TIPOS? (???)
-  end
+
 
   it 'Validating a Teacher with a String in a List<Student> attribute should throw an exception' do
     nico = Teacher.new
@@ -104,4 +107,9 @@ describe 'Object relations' do
     #expect(new_nico).to be(original_nico) #HAY ALGÚN MATCHER PARA HACER UNA COMPARACIÓN "PROFUNDA" (???)
   end
 
+  it 'Estudiante horrible descendents' do
+    #puts PersonaHorrible.descendants
+
+  end
+end
 end

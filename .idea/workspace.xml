@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4a8b133-213c-4341-a252-4498e8909e72" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/object_relations_spec.rb" afterPath="$PROJECT_DIR$/spec/object_relations_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PersistentAttribute.rb" afterPath="$PROJECT_DIR$/src/PersistentAttribute.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/orm.rb" afterPath="$PROJECT_DIR$/src/orm.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,29 +17,19 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_test__simple_objects_test___tadp_2017c2_grupo5.coverage" NAME="Run test 'simple_objects_test': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1505837583965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
     <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Class.coverage" NAME="Class Coverage Results" MODIFIED="1505235635162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" MODULE_NAME="tadp-2017c2-grupo5" />
-    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__object_relations_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'object_relations_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506712445240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
+    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__object_relations_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'object_relations_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506742527703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
     <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__test_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'test_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506261853624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
     <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@IRB_console__tadp_2017c2_grupo5.coverage" NAME="IRB console: tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506445063098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
-    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__simple_object_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'simple_object_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506447133112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
-    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__recovery_and_search_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'recovery_and_search_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506446726084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
+    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__recovery_and_search_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'recovery_and_search_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506742101924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
+    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__simple_object_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'simple_object_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506742105795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="orm.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/orm.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="alumno.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/alumno.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            <state relative-caret-position="401">
+              <caret line="157" column="5" lean-forward="false" selection-start-line="157" selection-start-column="5" selection-end-line="157" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -46,8 +38,8 @@
       <file leaf-file-name="PersistentAttribute.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PersistentAttribute.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="87" column="10" lean-forward="false" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
+            <state relative-caret-position="185">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,8 +48,8 @@
       <file leaf-file-name="object_relations_spec.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/object_relations_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="383">
+              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,9 +58,15 @@
       <file leaf-file-name="simple_object_spec.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/simple_object_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="864">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <marker date="1506742228195" expanded="true" signature="84:1951" ph="do ... end" />
+                <marker date="1506742228195" expanded="true" signature="100:361" ph="{ ... }" />
+                <marker date="1506742228195" expanded="true" signature="118:361" ph=" ... end" />
+                <marker date="1506742228195" expanded="true" signature="279:361" ph="##..." />
+                <marker date="1506742228195" expanded="true" signature="1941:1947" ph="do ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,7 +76,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
               <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-              <folding />
+              <folding>
+                <marker date="1506742228195" expanded="true" signature="585:637" ph="do ... end" />
+                <marker date="1506742228195" expanded="true" signature="641:849" ph="##..." />
+                <marker date="1506742228195" expanded="true" signature="894:961" ph="do ... end" />
+                <marker date="1506742228195" expanded="true" signature="1012:1081" ph="do ... end" />
+                <marker date="1506742228195" expanded="true" signature="1127:1188" ph="do ... end" />
+                <marker date="1506742228195" expanded="true" signature="1235:1297" ph="do ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,6 +103,11 @@
       <find>raise</find>
       <find>persistible_attributes</find>
       <find>puts</find>
+      <find>validations</find>
+      <find>validate!</find>
+      <find>validate</find>
+      <find>validate_ty</find>
+      <find>descendants</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,10 +135,10 @@
         <option value="$PROJECT_DIR$/spec/recovery_and_search_spec.rb" />
         <option value="$PROJECT_DIR$/db/Grade" />
         <option value="$PROJECT_DIR$/db/Student" />
-        <option value="$PROJECT_DIR$/src/PersistentAttribute.rb" />
         <option value="$PROJECT_DIR$/src/alumno.rb" />
-        <option value="$PROJECT_DIR$/spec/object_relations_spec.rb" />
+        <option value="$PROJECT_DIR$/src/PersistentAttribute.rb" />
         <option value="$PROJECT_DIR$/src/orm.rb" />
+        <option value="$PROJECT_DIR$/spec/object_relations_spec.rb" />
       </list>
     </option>
   </component>
@@ -138,7 +148,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
     <option name="y" value="24" />
     <option name="width" value="960" />
@@ -385,7 +395,7 @@
       <workItem from="1506281636531" duration="2172000" />
       <workItem from="1506370620537" duration="3187000" />
       <workItem from="1506442506288" duration="4414000" />
-      <workItem from="1506707837053" duration="4677000" />
+      <workItem from="1506707837053" duration="17709000" />
     </task>
     <task id="LOCAL-00001" summary="Intento de redefinir el new para reducir el scope de los mensajes de persistencia">
       <created>1505250868664</created>
@@ -433,42 +443,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.29 at 15h 57m 17s.xml">
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 28m 29s.xml">
       <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.29 at 15h 57m 34s.xml">
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 28m 43s.xml">
       <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.29 at 15h 58m 58s.xml">
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 29m 03s.xml">
       <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.29 at 16h 03m 58s.xml">
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 31m 56s.xml">
       <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.29 at 16h 07m 49s.xml">
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 33m 08s.xml">
       <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.29 at 16h 09m 26s.xml">
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 34m 48s.xml">
       <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.29 at 16h 10m 22s.xml">
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 35m 18s.xml">
       <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.29 at 16h 11m 29s.xml">
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 35m 28s.xml">
       <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.29 at 16h 12m 07s.xml">
-      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'recovery_and_search_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 28m 22s.xml">
+      <configuration name="Run spec 'recovery_and_search_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.29 at 16h 14m 05s.xml">
-      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'simple_object_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 28m 26s.xml">
+      <configuration name="Run spec 'simple_object_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82141000" />
+    <option name="totallyTimeSpent" value="95173000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="24" width="1922" height="1033" extended-state="7" />
+    <frame x="960" y="24" width="1922" height="1033" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.134375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -511,19 +521,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/simple_object_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="105" column="3" lean-forward="false" selection-start-line="105" selection-start-column="3" selection-end-line="105" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tadb-0.3.3/lib/tadb/table.rb" />
     <entry file="file://$PROJECT_DIR$/src/orm.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -538,7 +540,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="63" column="91" lean-forward="false" selection-start-line="63" selection-start-column="91" selection-end-line="63" selection-end-column="91" />
-          <folding />
+          <folding>
+            <marker date="1506742228195" expanded="true" signature="84:1951" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="100:361" ph="{ ... }" />
+            <marker date="1506742228195" expanded="true" signature="118:361" ph=" ... end" />
+            <marker date="1506742228195" expanded="true" signature="279:361" ph="##..." />
+            <marker date="1506742228195" expanded="true" signature="1941:1947" ph="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -668,26 +676,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/recovery_and_search_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/kernel.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="1328" column="8" lean-forward="false" selection-start-line="1328" selection-start-column="8" selection-end-line="1328" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/simple_object_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,11 +697,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PersistentAttribute.rb">
+    <entry file="file://$PROJECT_DIR$/spec/recovery_and_search_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="87" column="10" lean-forward="false" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="540">
+          <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+          <folding>
+            <marker date="1506742228195" expanded="true" signature="585:637" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="641:849" ph="##..." />
+            <marker date="1506742228195" expanded="true" signature="894:961" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="1012:1081" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="1127:1188" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="1235:1297" ph="do ... end" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/simple_object_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <marker date="1506742228195" expanded="true" signature="84:1951" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="100:361" ph="{ ... }" />
+            <marker date="1506742228195" expanded="true" signature="118:361" ph=" ... end" />
+            <marker date="1506742228195" expanded="true" signature="279:361" ph="##..." />
+            <marker date="1506742228195" expanded="true" signature="1941:1947" ph="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -721,18 +734,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/object_relations_spec.rb">
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/array.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="569" column="8" lean-forward="false" selection-start-line="569" selection-start-column="8" selection-end-line="569" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PersistentAttribute.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/object_relations_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/orm.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+        <state relative-caret-position="401">
+          <caret line="157" column="5" lean-forward="false" selection-start-line="157" selection-start-column="5" selection-end-line="157" selection-end-column="5" />
           <folding />
         </state>
       </provider>
