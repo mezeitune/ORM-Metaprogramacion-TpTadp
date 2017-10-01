@@ -183,3 +183,16 @@ class Hash
     Hash[self.map {|k, v| [k, block.call(k,v)] }]
   end
 end
+
+class Boolean
+  def self.new valor
+    case valor
+      when String
+        valor == '1'
+      when Integer
+        valor == 1
+      else
+        valor
+    end
+  end
+end
