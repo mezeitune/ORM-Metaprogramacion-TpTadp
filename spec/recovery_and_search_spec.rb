@@ -94,15 +94,15 @@ describe 'Recovery and Search' do
     expect(Point.is_finder? :find_by_id).to be_truthy
   end
 
-  #it 'If p1 is saved, it should be found using find_by_id' do
-  #  id = p1.save!
-  #  p Point.find_by_id(id)[0].id
-  #  expect(Point.find_by_id(id)[0]).to eq(p1)
-  #end
+  it 'If p1 is saved, it should be found using find_by_id' do
+    id = p1.save!
+    p1 = Point.find_by_id(id)[0]
+    expect(Point.find_by_id(id)[0].equal(p1)).to be_truthy
+  end
 
-  #it 'If p1 is saved, it should be found using find_by_x' do
-  #  p1.save!
-  #  expect(Point.find_by_x(p1.x)[0]).to eq(p1)
-  #end
+  it 'If p1 is saved, it should be found using find_by_x' do
+    p1.save!
+    expect(Point.find_by_x(p1.x)[0].equal(p1)).to be_truthy
+  end
 
 end

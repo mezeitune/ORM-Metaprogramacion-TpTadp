@@ -185,21 +185,9 @@ class Hash
 end
 
 module Boolean
-  def self.new valor
-    case valor
-      when String
-        valor == '1'
-      when Integer
-        valor == 1
-      else
-        valor
-    end
-  end
-
   def self.is_persistible?
     false
   end
-
 end
 
 class TrueClass
@@ -208,4 +196,11 @@ end
 
 class FalseClass
   include Boolean
+end
+
+class Person
+  has_one String, named: :first_name, default: ""
+  has_one String, named: :last_name, default: ""
+  has_one Numeric, named: :age, default: 0
+  has_one Boolean, named: :admin, default: true
 end
