@@ -35,31 +35,31 @@ describe 'Recovery and Search' do
     p3
   }
 
-  after(:all) do
+  after(:each) do
     TADB.class_eval("DB.clear_all")
   end
 
   it 'If no object is saved, all_instances should return an empty list' do
-    expect(Point.all_instances).to eq([[]])
+    expect(Point.all_instances).to eq([])
   end
 
   it 'A saved object should appear in all_instances' do
     p1.save!
-    pointCopy =  (Point.all_instances).first().first
+    pointCopy =  (Point.all_instances).first
     expect(pointCopy.equal(p1)).to be_truthy
   end
 
   it 'If two Points are persisted, Point.all_instances gives 2 instances of Point class' do
     p1.save!
     p2.save!
-    expect((Point.all_instances).first().size).to eq(2)
+    expect(Point.all_instances.size).to eq(2)
   end
 
   it 'If two Points are persisted, their information is correctly persisted' do
     p1.save!
     p2.save!
-    p1Copy = (Point.all_instances).first()[0] # Point.find_by_id(p1.id)
-    p2Copy = (Point.all_instances).first()[1] # Point.find_by_id(p2.id)
+    p1Copy = Point.all_instances[0] # Point.find_by_id(p1.id)
+    p2Copy = Point.all_instances[1] # Point.find_by_id(p2.id)
     expect(p1Copy.equal(p1) && p2Copy.equal(p2)).to be_truthy
   end
 
@@ -72,9 +72,9 @@ describe 'Recovery and Search' do
 
   it 'all_instances returns the correct quantity after a save and a forget' do
     p1.save!
-    quantity_after_save = Point.all_instances().first().size
+    quantity_after_save = Point.all_instances.size
     p1.forget!
-    quantity_after_forget = Point.all_instances().first().size
+    quantity_after_forget = Point.all_instances.size
     expect(quantity_after_save == 1 && quantity_after_forget == 0).to be_truthy
   end
 
@@ -96,6 +96,7 @@ describe 'Recovery and Search' do
 
   #it 'If p1 is saved, it should be found using find_by_id' do
   #  id = p1.save!
+  #  p Point.find_by_id(id)[0].id
   #  expect(Point.find_by_id(id)[0]).to eq(p1)
   #end
 

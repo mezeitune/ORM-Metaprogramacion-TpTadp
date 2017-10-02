@@ -17,7 +17,7 @@ describe 'Validations' do
     Student.new
   end
 
-  after(:all) do
+  after(:each) do
     TADB.class_eval("DB.clear_all")
   end
 

@@ -13,7 +13,7 @@ describe 'Simple object persistence' do
     Person.new
   }
 
-  after(:all) do
+  after(:each) do
     TADB.class_eval("DB.clear_all")
   end
 

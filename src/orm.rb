@@ -16,8 +16,8 @@ module Persistible
           new_instance = klass.new #ROMPE SI INITIALIZE RECIBE PARÁMETROS (!!!)
           new_instance.id = hashToConvert[:id]
           new_instance.refresh!
-        }.flatten
-      end
+        }
+      end.flatten
     end
 
     def method_missing(sym, *args, &block)
