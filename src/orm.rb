@@ -184,7 +184,7 @@ class Hash
   end
 end
 
-class Boolean
+module Boolean
   def self.new valor
     case valor
       when String
@@ -195,4 +195,17 @@ class Boolean
         valor
     end
   end
+
+  def self.is_persistible?
+    false
+  end
+
+end
+
+class TrueClass
+  include Boolean
+end
+
+class FalseClass
+  include Boolean
 end
