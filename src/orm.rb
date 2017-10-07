@@ -221,3 +221,10 @@ end
 class FalseClass
   include Boolean
 end
+
+class Person
+  has_one String, named: :first_name, default: ""
+  has_one String, named: :last_name, default: ""
+  has_one Numeric, named: :age, default: 0
+  has_one Boolean, named: :admin, default: true
+end
