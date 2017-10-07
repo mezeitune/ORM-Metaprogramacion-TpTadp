@@ -7,6 +7,7 @@ end
 
 class Person
   attr_accessor :grades
+  attr_accessor :saraza
 end
 
 describe 'Persistent attr_accessor' do
@@ -25,4 +26,14 @@ describe 'Persistent attr_accessor' do
     persisted_pepe = Person.all_instances[0]
     expect(persisted_pepe.grades[0].value).to eq 7
   end
+
+  it 'A not persistent attribute defined through attr_accessor should not be saved' do
+    pepe.grades = [Grade.new]
+    pepe.saraza = 5
+    pepe.save!
+    pepe.saraza = 0
+    pepe.refresh!
+    expect(pepe.saraza).to eq 0
+  end
+
 end
