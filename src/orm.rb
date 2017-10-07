@@ -113,6 +113,7 @@ module Persistible
 end
 
 class Module
+  alias_method :no_persistence_attr_accessor, :attr_accessor
 
   def has_one(type, named:,default: nil,**hash_validations)
     hash_validations ||= {}#SE PUEDE PONER COMO VALOR DEFAULT?
@@ -133,6 +134,29 @@ class Module
       self.include(Persistible)
     end
     @campos_default[named] = default#seteo valor por default (y me guardo como clave el nombre del atributo)
+  end
+
+  def attr_accessor(*syms)
+    syms.each do |sym|
+      if sym.to_s[-1].eql? 's'
+        is_multiple = true
+        name = sym.to_s.chomp('s')
+      else
+        is_multiple = false
+        name = sym.to_s
+      end
+      type_name = name.capitalize
+      if ((klass=Object.const_get(type_name)) && klass.is_a?(Class) && klass.is_persistible? rescue false)
+        #EL RESCUE ES UNA PORQUERÍA, PERO SINO EL CONST_GET ROMPE AL NO ENCONTRAR LA CONSTANTE
+        if(is_multiple)
+          has_many klass, named: sym
+        else
+          has_one klass, named: sym
+        end
+      else
+        no_persistence_attr_accessor(sym)
+      end
+    end
   end
 
   def descendants
@@ -185,21 +209,9 @@ class Hash
 end
 
 module Boolean
-  def self.new valor
-    case valor
-      when String
-        valor == '1'
-      when Integer
-        valor == 1
-      else
-        valor
-    end
-  end
-
   def self.is_persistible?
     false
   end
-
 end
 
 class TrueClass
