@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c6b1fc9-0f9a-48ec-ac3d-1d980a268747" name="Default" comment="" />
+    <list default="true" id="e4a8b133-213c-4341-a252-4498e8909e72" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/object_relations_spec.rb" afterPath="$PROJECT_DIR$/spec/object_relations_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PersistentAttribute.rb" afterPath="$PROJECT_DIR$/src/PersistentAttribute.rb" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,36 +14,75 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/screencast_example@Run_spec__golondrina_spec___screencast_example.coverage" NAME="Run spec 'golondrina_spec': screencast.example Coverage Results" MODIFIED="1502679131274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="screencast.example" />
+    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_test__simple_objects_test___tadp_2017c2_grupo5.coverage" NAME="Run test 'simple_objects_test': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1505837583965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
+    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Class.coverage" NAME="Class Coverage Results" MODIFIED="1505235635162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" MODULE_NAME="tadp-2017c2-grupo5" />
+    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__object_relations_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'object_relations_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506742955538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
+    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__test_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'test_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506261853624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
+    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@IRB_console__tadp_2017c2_grupo5.coverage" NAME="IRB console: tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506445063098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
+    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__recovery_and_search_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'recovery_and_search_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506742101924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
+    <SUITE FILE_PATH="coverage/tadp_2017c2_grupo5@Run_spec__simple_object_spec___tadp_2017c2_grupo5.coverage" NAME="Run spec 'simple_object_spec': tadp-2017c2-grupo5 Coverage Results" MODIFIED="1506742105795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="tadp-2017c2-grupo5" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="golondrina_spec.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/golondrina_spec.rb">
+      <file leaf-file-name="orm.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/orm.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
+            <state relative-caret-position="3492">
+              <caret line="194" column="5" lean-forward="true" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Golondrina.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Golondrina.rb">
+      <file leaf-file-name="PersistentAttribute.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PersistentAttribute.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="414">
+              <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/module.rb">
+      <file leaf-file-name="object_relations_spec.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/object_relations_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+            <state relative-caret-position="324">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simple_object_spec.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/simple_object_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="864">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <marker date="1506742228195" expanded="true" signature="84:1951" ph="do ... end" />
+                <marker date="1506742228195" expanded="true" signature="100:361" ph="{ ... }" />
+                <marker date="1506742228195" expanded="true" signature="118:361" ph=" ... end" />
+                <marker date="1506742228195" expanded="true" signature="279:361" ph="##..." />
+                <marker date="1506742228195" expanded="true" signature="1941:1947" ph="do ... end" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recovery_and_search_spec.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/recovery_and_search_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+              <folding>
+                <marker date="1506742228195" expanded="true" signature="585:637" ph="do ... end" />
+                <marker date="1506742228195" expanded="true" signature="641:849" ph="##..." />
+                <marker date="1506742228195" expanded="true" signature="894:961" ph="do ... end" />
+                <marker date="1506742228195" expanded="true" signature="1012:1081" ph="do ... end" />
+                <marker date="1506742228195" expanded="true" signature="1127:1188" ph="do ... end" />
+                <marker date="1506742228195" expanded="true" signature="1235:1297" ph="do ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,18 +92,52 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="RSpec Test Template" />
         <option value="Ruby Class Template" />
       </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>raise</find>
+      <find>persistible_attributes</find>
+      <find>puts</find>
+      <find>validations</find>
+      <find>validate!</find>
+      <find>validate</find>
+      <find>descendants</find>
+      <find>validate_ty</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="nmrainhart@gmail.com" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev-nico" />
+      </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/spec/golondrina_spec.rb" />
-        <option value="$PROJECT_DIR$/src/db.rb" />
-        <option value="$PROJECT_DIR$/src/Golondrina.rb" />
-        <option value="$PROJECT_DIR$/src/module.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/Class.rb" />
+        <option value="$PROJECT_DIR$/db/Person" />
+        <option value="$PROJECT_DIR$/spec/test_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/simple_object_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/recovery_and_search_spec.rb" />
+        <option value="$PROJECT_DIR$/db/Grade" />
+        <option value="$PROJECT_DIR$/db/Student" />
+        <option value="$PROJECT_DIR$/src/alumno.rb" />
+        <option value="$PROJECT_DIR$/src/orm.rb" />
+        <option value="$PROJECT_DIR$/src/PersistentAttribute.rb" />
+        <option value="$PROJECT_DIR$/spec/object_relations_spec.rb" />
       </list>
     </option>
   </component>
@@ -92,33 +169,32 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ORM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ORM" type="462c0819:PsiDirectoryNode" />
+              <item name="tadp-2017c2-grupo5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tadp-2017c2-grupo5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ORM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ORM" type="462c0819:PsiDirectoryNode" />
+              <item name="tadp-2017c2-grupo5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tadp-2017c2-grupo5" type="462c0819:PsiDirectoryNode" />
               <item name="spec" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ORM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ORM" type="462c0819:PsiDirectoryNode" />
+              <item name="tadp-2017c2-grupo5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tadp-2017c2-grupo5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -132,10 +208,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="RSpec.Run spec 'golondrina_spec': screencast.example">
-    <configuration name="Run spec 'golondrina_spec': screencast.example" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+  <component name="RunManager" selected="RSpec.Run spec 'object_relations_spec': tadp-2017c2-grupo5">
+    <configuration name="IRB console: tadp-2017c2-grupo5" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="tadp-2017c2-grupo5" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$APPLICATION_HOME_DIR$/rb/testing/runner/irb.rb" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--prompt simple" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
+    </configuration>
+    <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="screencast.example" />
+      <module name="tadp-2017c2-grupo5" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
@@ -152,7 +247,7 @@
         </COVERAGE_PATTERN>
       </EXTENSION>
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/golondrina_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/object_relations_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -165,9 +260,116 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
     </configuration>
+    <configuration name="Run spec 'recovery_and_search_spec': tadp-2017c2-grupo5" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="tadp-2017c2-grupo5" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/recovery_and_search_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+    </configuration>
+    <configuration name="Run spec 'simple_object_spec': tadp-2017c2-grupo5" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="tadp-2017c2-grupo5" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/simple_object_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+    </configuration>
+    <configuration name="Run spec 'test_spec': tadp-2017c2-grupo5" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="tadp-2017c2-grupo5" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="C:\Users\Nico\RubymineProjects\tadp-2017c2-grupo5\spec\simple_object_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="IRB console.IRB console: tadp-2017c2-grupo5" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.Run spec 'test_spec': tadp-2017c2-grupo5" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.Run spec 'simple_object_spec': tadp-2017c2-grupo5" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.Run spec 'recovery_and_search_spec': tadp-2017c2-grupo5" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.Run spec 'object_relations_spec': tadp-2017c2-grupo5" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.Run spec 'golondrina_spec': screencast.example" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="RSpec.Run spec 'object_relations_spec': tadp-2017c2-grupo5" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.Run spec 'simple_object_spec': tadp-2017c2-grupo5" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.Run spec 'recovery_and_search_spec': tadp-2017c2-grupo5" />
+        <item index="3" class="java.lang.String" itemvalue="IRB console.IRB console: tadp-2017c2-grupo5" />
+        <item index="4" class="java.lang.String" itemvalue="IRB console.IRB console: tadp-2017c2-grupo5" />
       </list>
     </recent_temporary>
   </component>
@@ -177,251 +379,388 @@
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2c6b1fc9-0f9a-48ec-ac3d-1d980a268747" name="Default" comment="" />
-      <created>1502595142760</created>
+      <changelist id="e4a8b133-213c-4341-a252-4498e8909e72" name="Default" comment="" />
+      <created>1505232740693</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1502595142760</updated>
-      <workItem from="1502595146743" duration="946000" />
-      <workItem from="1502597485931" duration="3000" />
-      <workItem from="1502674364299" duration="3374000" />
-      <workItem from="1505100174993" duration="27000" />
-      <workItem from="1505100401372" duration="4046000" />
-      <workItem from="1505147780873" duration="52000" />
+      <updated>1505232740693</updated>
+      <workItem from="1505232742678" duration="938000" />
+      <workItem from="1505233702390" duration="13520000" />
+      <workItem from="1505319457399" duration="15380000" />
+      <workItem from="1505831906852" duration="12602000" />
+      <workItem from="1505927318015" duration="10485000" />
+      <workItem from="1505943556236" duration="604000" />
+      <workItem from="1506258515677" duration="14162000" />
+      <workItem from="1506281636531" duration="2172000" />
+      <workItem from="1506370620537" duration="3187000" />
+      <workItem from="1506442506288" duration="4414000" />
+      <workItem from="1506707837053" duration="18162000" />
     </task>
+    <task id="LOCAL-00001" summary="Intento de redefinir el new para reducir el scope de los mensajes de persistencia">
+      <created>1505250868664</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1505250868664</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Parte 1 terminada. Faltan testear algunos escenarios">
+      <created>1505335566037</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505335566037</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Agregados all_instances y find_by_&lt;what&gt;">
+      <created>1505847423768</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1505847423768</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Terminado find_by_&lt;what&gt;">
+      <created>1506261875018</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1506261875018</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Agregadas composición y validación de tipos">
+      <created>1506279409046</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1506279409046</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Arranque con PersistentAttribute">
+      <created>1506371893927</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1506371893927</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Run_spec_'golondrina_spec'__screencast_example - 2017.08.13 at 23h 32m 06s.xml">
-      <configuration name="Run spec 'golondrina_spec': screencast.example" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 28m 43s.xml">
+      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'golondrina_spec'__screencast_example - 2017.08.13 at 23h 35m 59s.xml">
-      <configuration name="Run spec 'golondrina_spec': screencast.example" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 29m 03s.xml">
+      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'golondrina_spec'__screencast_example - 2017.08.13 at 23h 38m 27s.xml">
-      <configuration name="Run spec 'golondrina_spec': screencast.example" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 31m 56s.xml">
+      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'golondrina_spec'__screencast_example - 2017.08.13 at 23h 38m 39s.xml">
-      <configuration name="Run spec 'golondrina_spec': screencast.example" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 33m 08s.xml">
+      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'golondrina_spec'__screencast_example - 2017.08.13 at 23h 38m 49s.xml">
-      <configuration name="Run spec 'golondrina_spec': screencast.example" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 34m 48s.xml">
+      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'golondrina_spec'__screencast_example - 2017.08.13 at 23h 39m 21s.xml">
-      <configuration name="Run spec 'golondrina_spec': screencast.example" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 35m 18s.xml">
+      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'golondrina_spec'__screencast_example - 2017.08.13 at 23h 39m 33s.xml">
-      <configuration name="Run spec 'golondrina_spec': screencast.example" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 35m 28s.xml">
+      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'golondrina_spec'__screencast_example - 2017.08.13 at 23h 39m 41s.xml">
-      <configuration name="Run spec 'golondrina_spec': screencast.example" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 41m 07s.xml">
+      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'golondrina_spec'__screencast_example - 2017.08.13 at 23h 39m 49s.xml">
-      <configuration name="Run spec 'golondrina_spec': screencast.example" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 41m 32s.xml">
+      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'golondrina_spec'__screencast_example - 2017.08.13 at 23h 52m 11s.xml">
-      <configuration name="Run spec 'golondrina_spec': screencast.example" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Run_spec_'object_relations_spec'__tadp-2017c2-grupo5 - 2017.09.30 at 00h 42m 36s.xml">
+      <configuration name="Run spec 'object_relations_spec': tadp-2017c2-grupo5" configurationId="RSpecRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8448000" />
+    <option name="totallyTimeSpent" value="95626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="24" width="1922" height="1033" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18177083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.134375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.43541667" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879582" sideWeight="0.56458336" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.49583334" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.gitignore" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Intento de redefinir el new para reducir el scope de los mensajes de persistencia" />
+    <MESSAGE value="Parte 1 terminada. Faltan testear algunos escenarios" />
+    <MESSAGE value="Agregados all_instances y find_by_&lt;what&gt;" />
+    <MESSAGE value="Terminado find_by_&lt;what&gt;" />
+    <MESSAGE value="Agregadas composición y validación de tipos" />
+    <MESSAGE value="Arranque con PersistentAttribute" />
+    <MESSAGE value="Modificados save!, refresh! y validate!, delegando en PersistentAttribute" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificados save!, refresh! y validate!, delegando en PersistentAttribute" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/golondrina_spec.rb">
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tadb-0.3.3/lib/tadb/table.rb" />
+    <entry file="file://$PROJECT_DIR$/src/orm.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
+        <state relative-caret-position="476">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Golondrina.rb">
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tadb-0.3.3/lib/tadb/table.rb" />
+    <entry file="file://$PROJECT_DIR$/spec/simple_object_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="1071">
+          <caret line="63" column="91" lean-forward="false" selection-start-line="63" selection-start-column="91" selection-end-line="63" selection-end-column="91" />
+          <folding>
+            <marker date="1506742228195" expanded="true" signature="84:1951" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="100:361" ph="{ ... }" />
+            <marker date="1506742228195" expanded="true" signature="118:361" ph=" ... end" />
+            <marker date="1506742228195" expanded="true" signature="279:361" ph="##..." />
+            <marker date="1506742228195" expanded="true" signature="1941:1947" ph="do ... end" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module.rb">
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tadb-0.3.3/lib/tadb/db.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tadb-0.3.3/lib/tadb/table.rb" />
+    <entry file="file://$PROJECT_DIR$/src/orm.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        <state relative-caret-position="595">
+          <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/golondrina_spec.rb">
+    <entry file="file://$PROJECT_DIR$/src/orm.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        <state relative-caret-position="221">
+          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Golondrina.rb">
+    <entry file="file://$PROJECT_DIR$/src/db.rb" />
+    <entry file="file://$PROJECT_DIR$/src/db.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tadb-0.3.3/lib/tadb/utils.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/2.4.0/json/common.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/2.4.0/mathn.rb" />
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/numeric.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-4743">
+          <caret line="75" column="25" lean-forward="false" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/2.4.0/openssl/digest.rb" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rb/testing/runner/irb.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/2.4.0/irb/ruby-lex.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/2.4.0/irb.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/2.4.0/irb/ruby-token.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/2.4.0/rexml/xpath_parser.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/2.4.0/digest/sha2.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/rspec-expectations-3.6.0/lib/rspec/expectations/expectation_target.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tadb-0.3.3/lib/tadb.rb" />
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/golondrina_spec.rb">
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tadb-0.3.3/lib/tadb/db.rb" />
+    <entry file="file://$PROJECT_DIR$/db/Person" />
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/class.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="485">
+          <caret line="113" column="18" lean-forward="true" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Golondrina.rb">
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/rspec-expectations-3.6.0/lib/rspec/matchers.rb" />
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/string.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="260">
+          <caret line="1183" column="8" lean-forward="false" selection-start-line="1183" selection-start-column="8" selection-end-line="1183" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/rspec-expectations-3.6.0/lib/rspec/matchers/built_in/contain_exactly.rb" />
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tadb-0.3.3/lib/tadb/table.rb" />
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/module.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Golondrina.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/golondrina_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Golondrina.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/golondrina_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/golondrina_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/module.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
+        <state relative-caret-position="413">
           <caret line="464" column="8" lean-forward="false" selection-start-line="464" selection-start-column="8" selection-end-line="464" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Golondrina.rb">
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/object.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="311">
+          <caret line="528" column="8" lean-forward="false" selection-start-line="528" selection-start-column="8" selection-end-line="528" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Ruby24-x64/lib/ruby/2.4.0/pp.rb" />
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/basic_object.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="273" column="8" lean-forward="false" selection-start-line="273" selection-start-column="8" selection-end-line="273" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/Student" />
+    <entry file="file://$PROJECT_DIR$/db/Grade" />
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/array.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="553" column="8" lean-forward="false" selection-start-line="553" selection-start-column="8" selection-end-line="553" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/kernel.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="1328" column="8" lean-forward="false" selection-start-line="1328" selection-start-column="8" selection-end-line="1328" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs24/hash.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7318">
+          <caret line="178" column="13" lean-forward="false" selection-start-line="178" selection-start-column="13" selection-end-line="178" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/recovery_and_search_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+          <folding>
+            <marker date="1506742228195" expanded="true" signature="585:637" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="641:849" ph="##..." />
+            <marker date="1506742228195" expanded="true" signature="894:961" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="1012:1081" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="1127:1188" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="1235:1297" ph="do ... end" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/simple_object_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <marker date="1506742228195" expanded="true" signature="84:1951" ph="do ... end" />
+            <marker date="1506742228195" expanded="true" signature="100:361" ph="{ ... }" />
+            <marker date="1506742228195" expanded="true" signature="118:361" ph=" ... end" />
+            <marker date="1506742228195" expanded="true" signature="279:361" ph="##..." />
+            <marker date="1506742228195" expanded="true" signature="1941:1947" ph="do ... end" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alumno.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module.rb">
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/array.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        <state relative-caret-position="204">
+          <caret line="569" column="8" lean-forward="false" selection-start-line="569" selection-start-column="8" selection-end-line="569" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/orm.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3492">
+          <caret line="194" column="5" lean-forward="true" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PersistentAttribute.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/object_relations_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
